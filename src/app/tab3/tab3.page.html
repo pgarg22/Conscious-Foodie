@@ -1,0 +1,48 @@
+
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title > 
+      Profile
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="editProfile()"><ion-icon name="add-circle"></ion-icon></button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  
+  <div class="card">
+    <div class="header">
+    <div class="avatar">
+    <img src="../../assets/avatar.png" alt="">
+    </div>
+    </div>
+    </div>
+
+    <div class="card-body">
+
+      <ion-button [ngModel]="name" expand="full" color="primary">
+        <ion-text color="secondary">{{name}}</ion-text>
+
+
+      </ion-button>
+      <ion-button [ngModel]="email" expand="full" color="primary">
+        <ion-text color="secondary">{{email}}</ion-text>
+        
+      </ion-button>
+      <ion-button [ngModel]="gender" expand="full" color="primary">
+        <ion-text color="secondary">{{gender}}</ion-text>
+        </ion-button>
+      <ion-button [ngModel]="address" expand="full" color="primary">
+        <ion-text color="secondary">{{address}}</ion-text>
+        </ion-button>
+      <ion-button [ngModel]="goal" expand="full" color="primary">
+        <ion-text color="secondary">{{goal}}</ion-text>
+        </ion-button>
+      </div>
+
+</ion-content>

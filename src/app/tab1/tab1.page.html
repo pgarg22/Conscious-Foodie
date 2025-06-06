@@ -1,0 +1,39 @@
+<!-- HEADER -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <div>
+        <ion-text color="primary">Basket</ion-text>
+        <ion-button class= "main-action" ion-button icon-only (click)="addItem()">
+          <ion-icon color="secondary" name="add"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+    <div class="card"></div>
+</ion-header>
+
+<!-- CONTENT -->
+<ion-content [fullscreen]="true">
+  <div class="card">
+    <ion-text class="card-header" color="primary">Shopping List</ion-text>
+    <div class="card-body">
+      <ion-list>
+        <ion-item *ngFor="let item of items;let i = index" (click)="viewItem(item)">
+          <ion-button  class="CF-bg-color">
+          {{item.title}}
+          <div class="item-note CF-bg-color" item-end>
+            <button class="" ion-button clear (click)="boughtTask(i)">
+              <ion-icon color="secondary" name="cart"></ion-icon>
+            </button>
+            <button class="CF-bg-color" ion-button clear (click)="deleteTask(i)">
+              <ion-icon color="secondary" name="trash"></ion-icon>
+            </button>
+          </div>
+        </ion-button>
+        </ion-item>
+      </ion-list>
+      </div>
+    </div>
+
+</ion-content>
